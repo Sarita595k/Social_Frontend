@@ -6,7 +6,7 @@ export const fetchPosts = createAsyncThunk(
     async (_, { getState }) => {
         const token = getState().user.token
         const res = await axios.get(
-            `${import.meta.env.VITE_API_ENDPOINT}/api/posts/allPosts`,
+            `${import.meta.env.VITE_API_ENDPOINT}api/posts/allPosts`,
             { headers: { token } }
         )
         return res.data.posts
