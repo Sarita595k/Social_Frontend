@@ -5,7 +5,7 @@ export const signUpUser = createAsyncThunk(
     "user/signup",
     async (userData) => {
         const res = await axios.post(
-            `${import.meta.env.VITE_API_ENDPOINT}/api/user/signup`,
+            `${import.meta.env.VITE_API_ENDPOINT}api/user/signup`,
             userData
         );
         return res.data;
@@ -16,7 +16,7 @@ export const signInUser = createAsyncThunk(
     "user/login",
     async (userData) => {
         const res = await axios.post(
-            `${import.meta.env.VITE_API_ENDPOINT}/api/user/login`,
+            `${import.meta.env.VITE_API_ENDPOINT}api/user/login`,
             userData
         );
         return res.data;
